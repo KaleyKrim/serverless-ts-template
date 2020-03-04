@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "declaration": true,
+    "target": "es2018",
+    "outDir": "build",
+    "rootDir": "src",
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "build"]
+}

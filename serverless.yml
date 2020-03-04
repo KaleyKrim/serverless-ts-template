@@ -1,0 +1,27 @@
+service:
+  name: serverless-ts-project
+frameworkVersion: '>=1.0.0 < 2.0.0'
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+plugins:
+  - serverless-webpack
+  - serverless-offline
+package:
+  individually: true
+  excludeDevDependencies: false
+provider:
+  name: aws
+  stage: local
+  runtime: nodejs10.x
+  region: us-west-1
+  endpointType: regional
+functions:
+  sampleFunction:
+    handler: src/sample.handler
+    events:
+      - http:
+          method: get
+          path: sample
+          cors: true
