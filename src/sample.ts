@@ -1,5 +1,5 @@
 import 'source-map-support/register';
-import { ProxyHandler, APIGatewayEventRequestContext } from "aws-lambda";
+import { ProxyHandler } from "aws-lambda";
 
 export const handler: ProxyHandler = (async (event, context) => {
 	return {
